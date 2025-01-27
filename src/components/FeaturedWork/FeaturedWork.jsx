@@ -64,7 +64,6 @@ const FeaturedWork = () => {
         <div>
             {/* First Section */}
             <div className='mt-10' ref={firstSectionRef}>
-                {/* Define the animation keyframes */}
                 <style>
                     {`
                     @keyframes slideInFromLeft {
@@ -99,9 +98,9 @@ const FeaturedWork = () => {
                     </h3>
 
                     {/* "WE PROMOTE" and "you grow" */}
-                    <div className='flex flex-row gap-2'>
+                    <div className='flex flex-col sm:flex-row gap-2'>
                         <h1
-                            className="text-6xl font-bold uppercase text-white"
+                            className="text-4xl sm:text-6xl font-bold uppercase text-white"
                             style={{
                                 textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
                                 animation: isFirstSectionVisible ? 'slideInFromLeft 1s ease-in-out forwards' : 'none',
@@ -110,7 +109,7 @@ const FeaturedWork = () => {
                             WE PROMOTE
                         </h1>
                         <h2
-                            className='text-2xl uppercase mt-4 font-semibold'
+                            className='text-xl sm:text-2xl uppercase mt-4 sm:mt-0 font-semibold'
                             style={{
                                 animation: isFirstSectionVisible ? 'slideInFromLeft 1s ease-in-out forwards' : 'none',
                             }}
@@ -122,16 +121,15 @@ const FeaturedWork = () => {
             </div>
 
             {/* Second Section (Image Gallery) */}
-            <div className='mt-10'>
+            <div className='mt-10 ml-20'>
                 <div className='flex items-center justify-center'>
-                    <img src='frame.png' alt='frame work' />
+                    <img src='frame.png' alt='frame work' className='max-w-full h-auto' />
                 </div>
-                <div className='flex items-center justify-center gap-4 mt-4 lg:ml-96'>
+                <div className='flex items-center justify-center gap-4 mt-4 sm:ml-20'>
                     {/* Image 1 */}
                     <img
-                        className={`rounded-3xl transition-all duration-300 cursor-pointer ${
-                            activeImage === 0 ? 'w-[300px]' : 'w-[100px]'
-                        } h-[400px] hover:opacity-80`}
+                        className={`rounded-3xl transition-all duration-300 cursor-pointer ${activeImage === 0 ? 'w-[300px]' : 'w-[100px]'
+                            } h-[250px] sm:h-[400px] hover:opacity-80`}
                         src="/imgone.jpg"
                         alt="Image 1"
                         onClick={() => handleImageClick(0)}
@@ -139,9 +137,8 @@ const FeaturedWork = () => {
 
                     {/* Image 2 */}
                     <img
-                        className={`rounded-3xl transition-all duration-300 cursor-pointer ${
-                            activeImage === 1 ? 'w-[300px]' : 'w-[100px]'
-                        } h-[400px] hover:opacity-80`}
+                        className={`rounded-3xl transition-all duration-300 cursor-pointer ${activeImage === 1 ? 'w-[300px]' : 'w-[100px]'
+                            } h-[250px] sm:h-[400px] hover:opacity-80`}
                         src="/imgtwo.jpg"
                         alt="Image 2"
                         onClick={() => handleImageClick(1)}
@@ -149,9 +146,8 @@ const FeaturedWork = () => {
 
                     {/* Image 3 */}
                     <img
-                        className={`rounded-3xl transition-all duration-300 cursor-pointer ${
-                            activeImage === 2 ? 'w-[300px]' : 'w-[100px]'
-                        } h-[400px] hover:opacity-80`}
+                        className={`rounded-3xl transition-all duration-300 cursor-pointer ${activeImage === 2 ? 'w-[300px]' : 'w-[100px]'
+                            } h-[250px] sm:h-[400px] hover:opacity-80`}
                         src="/imgthree.jpg"
                         alt="Image 3"
                         onClick={() => handleImageClick(2)}
@@ -162,57 +158,63 @@ const FeaturedWork = () => {
             {/* Third Section (Numbered List) */}
             <div className='mt-10' ref={thirdSectionRef}>
                 <div
-                    className='flex flex-col lg:flex-row gap-8 p-4'
+                    className='flex flex-col sm:flex-row gap-8 p-4'
                     style={{
                         animation: isThirdSectionVisible ? 'slideInFromBottom 1s ease-in-out forwards' : 'none',
-                        transform: isThirdSectionVisible ? 'translateY(0)' : 'translateY(100%)', // Start from below
-                        opacity: isThirdSectionVisible ? 1 : 0, // Fade in
+                        transform: isThirdSectionVisible ? 'translateY(0)' : 'translateY(100%)',
+                        opacity: isThirdSectionVisible ? 1 : 0,
                     }}
                 >
                     {/* one */}
                     <div className='flex flex-col gap-8'>
                         <div className='flex'>
                             <h1
-                                className="text-6xl font-bold uppercase text-white"
+                                className="text-4xl sm:text-6xl font-bold uppercase text-white"
                                 style={{
                                     textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
                                 }}
                             >
                                 01.
                             </h1>
-                            <p className='font-bold mt-9'>Website Development</p>
+                            <p className='font-bold mt-4 sm:mt-9'>Website Development</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste modi labore nemo unde vel odio laborum et voluptatem cumque, dolores tempore minus nihil mollitia? Minima officia aliquam illum culpa!</p>
+                        <p className='text-sm sm:text-base'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste modi labore nemo unde vel odio laborum et voluptatem cumque, dolores tempore minus nihil mollitia? Minima officia aliquam illum culpa!
+                        </p>
                     </div>
                     {/* two */}
                     <div className='flex flex-col gap-8'>
                         <div className='flex'>
                             <h1
-                                className="text-6xl font-bold uppercase text-white"
+                                className="text-4xl sm:text-6xl font-bold uppercase text-white"
                                 style={{
                                     textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
                                 }}
                             >
                                 02.
                             </h1>
-                            <p className='font-bold mt-9'>Paid Advertisement</p>
+                            <p className='font-bold mt-4 sm:mt-9'>Paid Advertisement</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste modi labore nemo unde vel odio laborum et voluptatem cumque, dolores tempore minus nihil mollitia? Minima officia aliquam illum culpa!</p>
+                        <p className='text-sm sm:text-base'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste modi labore nemo unde vel odio laborum et voluptatem cumque, dolores tempore minus nihil mollitia? Minima officia aliquam illum culpa!
+                        </p>
                     </div>
                     {/* three */}
                     <div className='flex flex-col gap-8'>
                         <div className='flex'>
                             <h1
-                                className="text-6xl font-bold uppercase text-white"
+                                className="text-4xl sm:text-6xl font-bold uppercase text-white"
                                 style={{
                                     textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
                                 }}
                             >
                                 03.
                             </h1>
-                            <p className='font-bold mt-9'>Classified Ad Post</p>
+                            <p className='font-bold mt-4 sm:mt-9'>Classified Ad Post</p>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste modi labore nemo unde vel odio laborum et voluptatem cumque, dolores tempore minus nihil mollitia? Minima officia aliquam illum culpa!</p>
+                        <p className='text-sm sm:text-base'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste modi labore nemo unde vel odio laborum et voluptatem cumque, dolores tempore minus nihil mollitia? Minima officia aliquam illum culpa!
+                        </p>
                     </div>
                 </div>
             </div>

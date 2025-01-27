@@ -4,6 +4,7 @@ const config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/flowbite/**/*.js", // Include Flowbite components
   ],
   theme: {
     extend: {
@@ -13,7 +14,10 @@ const config = {
       },
     },
   },
-  plugins: [require('daisyui'),],
+  plugins: [
+    require('daisyui'), // Your existing plugin
+    require('flowbite/plugin'), // Correct Flowbite plugin import
+  ],
 };
 
 export default config;
