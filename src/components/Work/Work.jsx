@@ -62,8 +62,9 @@ const Work = () => {
 
       {/* Swiper Section */}
       <section className="flex items-center justify-center mt-20">
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-4xl mt-2 ">
           <Swiper
+            className=" h-[400px]  "
             spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
@@ -74,7 +75,7 @@ const Work = () => {
           >
             {cards.map((card) => (
               <SwiperSlide key={card.id}>
-                <div className="card bg-base-100 w-full max-w-md mx-auto shadow-xl relative">
+                <div className="card bg-base-100 w-full  max-w-md mx-auto shadow-xl mt-6 relative">
                   {/* Card Content */}
                   <div>
                     <figure className="px-10 pt-10">
@@ -91,11 +92,10 @@ const Work = () => {
 
                   {/* Toggle Button */}
                   <div
-                    className={`absolute ${
-                      card.position === "bottom"
+                    className={`absolute ${card.position === "bottom"
                         ? "bottom-[-20px] left-1/2 transform -translate-x-1/2"
                         : "top-[-20px] left-1/2 transform -translate-x-1/2"
-                    }`}
+                      }`}
                   >
                     <button
                       className="btn rounded-full bg-white border-2 border-gray-300 text-black text-xl shadow-md w-12 h-12 flex items-center justify-center"
