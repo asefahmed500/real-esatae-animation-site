@@ -40,8 +40,8 @@ const NavBar = () => {
     );
 
     return (
-        <div className="fixed top-0 left-0 w-full text-white z-50 bg-black shadow-md">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="fixed top-0 left-0 w-full text-white z-50  ">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
                 <div className="flex justify-between items-center py-4">
                     
                     {/* Logo */}
@@ -83,7 +83,8 @@ const NavBar = () => {
 
                     {/* Settings Card */}
                     {isCardVisible && (
-                        <div className="absolute right-4 top-14 w-80 bg-gray-800 text-white rounded-lg shadow-lg z-50">
+                       <div className="">
+                         <div className="absolute top-16 w-80 bg-gray-800 text-white rounded-lg shadow-lg z-50 -ml-[300px]">
                             <div className="flex justify-between items-center p-4 border-b border-gray-600">
                                 <img className="w-16 h-8" src="/cardimglogo.png" alt="Logo" />
                                 <button onClick={toggleCard}>
@@ -111,6 +112,8 @@ const NavBar = () => {
                                 </div>
                             </div>
                         </div>
+                        </div>
+
                     )}
                 </div>
             </div>

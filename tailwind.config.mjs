@@ -12,6 +12,9 @@ const config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        unbounded: ["var(--font-unbounded)", "sans-serif"], // Add Unbounded font
+      },
     },
   },
   plugins: [
