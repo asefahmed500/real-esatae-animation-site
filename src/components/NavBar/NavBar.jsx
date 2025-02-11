@@ -28,10 +28,10 @@ const NavBar = () => {
                 <Link className="uppercase text-sm hover:text-gray-400" href="/services">Services</Link>
             </li>
             <li>
-                <Link className="uppercase text-sm hover:text-gray-400" href="/">Projects</Link>
+                <Link className="uppercase text-sm hover:text-gray-400" href="/projects">Projects</Link>
             </li>
             <li>
-                <Link className="uppercase text-sm hover:text-gray-400" href="/">Blog</Link>
+                <Link className="uppercase text-sm hover:text-gray-400" href="/blogs">Blog</Link>
             </li>
             <li>
                 <Link className="uppercase text-sm hover:text-gray-400" href="/">Contact</Link>

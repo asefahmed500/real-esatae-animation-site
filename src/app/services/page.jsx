@@ -207,7 +207,7 @@ const Page = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-10 items-center justify-center mt-10 px-4 ">
+        <div className="flex flex-col lg:flex-row gap-4 items-center justify-center mt-10 px-4 ">
           {/* Accordion Section */}
           <div className="w-full lg:w-1/2 space-y-6">
             {/* Accordion 1 */}
@@ -250,7 +250,7 @@ const Page = () => {
 
 
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+                <div className="card w-full max-w-sm bg-base-200">
                   <form className="card-body">
                     <div className="form-control">
                       <label className="label">
@@ -274,7 +274,7 @@ const Page = () => {
                     </div>
 
                     <div className="form-control mt-6">
-                      <button className="btn btn-primary">Send Your Message</button>
+                      <button className="btn btn-outline bg-black text-white">Send Your Message</button>
                     </div>
                   </form>
                 </div>
